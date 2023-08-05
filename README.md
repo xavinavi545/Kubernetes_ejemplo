@@ -27,3 +27,28 @@ minikube status
 kubectl config current-context
 
 De aqui usaremos VCS para tener nuestro archivos yaml. Que tendremos dos.
+Una vez hecho la actualizacion y configuracion de minikube como cluster. Se detecta el uso de docker desktop. Esto creara el contenedor con el servicio. 
+![image](https://github.com/xavinavi545/Kubernetes_ejemplo/assets/115561829/7e1ba479-59ff-4da6-a8cd-19b925d57eb8)
+Gracias a Minikube. Que es un cluster local nos permite hacer la mayoría de las instalaciones de forma automática en Docker desktop.
+
+![image](https://github.com/xavinavi545/Kubernetes_ejemplo/assets/115561829/f94ec5ed-17be-419a-8438-f6e632f25ba3)
+
+Usaremos este comando y tendremos una confirmacion.
+![image](https://github.com/xavinavi545/Kubernetes_ejemplo/assets/115561829/94be8f8f-fb12-477d-9f28-ff6e2c8c050d)
+
+Ahora iremos a VSC y haremos los yaml. 
+Guarda ambos archivos y, desde tu terminal, apunta a la carpeta donde los tienes guardados.
+
+Ejecuta los siguientes comandos para desplegar la aplicación en tu clúster de Kubernetes:
+
+kubectl apply -f nginx-deployment.yaml
+kubectl apply -f nginx-service.yaml
+
+Verifica el estado del despliegue y el servicio:
+kubectl get pods
+kubectl get services
+
+Una vez que los pods estén en estado "Running" y el servicio tenga una dirección IP asignada (en el caso del tipo "LoadBalancer"), podrás acceder a la aplicación web de Nginx a través de esa dirección IP.
+
+
+
