@@ -45,10 +45,11 @@ kubectl apply -f nginx-deployment.yaml
 kubectl apply -f nginx-service.yaml
 
 Verifica el estado del despliegue y el servicio:
+
 kubectl get pods
 kubectl get services
 
 Una vez que los pods estén en estado "Running" y el servicio tenga una dirección IP asignada (en el caso del tipo "LoadBalancer"), podrás acceder a la aplicación web de Nginx a través de esa dirección IP.
-
+minikube service nginx-service
 
 
