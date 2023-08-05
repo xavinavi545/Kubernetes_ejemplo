@@ -53,3 +53,6 @@ Una vez que los pods est√©n en estado "Running" y el servicio tenga una direcci√
 minikube service nginx-service
 
 
+TIP:
+Mientras todo el proceso se haga no cerrar el terminal donde se inicie el comando de minikube.
+
